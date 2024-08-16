@@ -1,0 +1,169 @@
+:root{
+    --red: rgb(246, 50, 50);
+    --orange: rgb(254, 182, 20);
+    --gray: rgb(244, 244, 244);
+}
+
+*{
+    margin: 0  ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+header{
+    background: var(--red) ;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;  
+}
+
+header h1 {
+    display: inline-block;
+    border: .5rem  white solid;
+    padding: .5rem;
+    border-radius: 50px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner h2{
+    font-size: 5rem;
+    position: absolute;
+    display: inline-block;
+    top: 20% ;
+    left: 0;
+    padding: 2rem 2rem;
+    background-color: var(--orange);
+}
+
+.banner span{
+    font-size: 6rem;
+}
+
+nav{
+    background: var(--gray);
+    padding: 2rem;
+    position: sticky;
+    top: 107px;
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    transition: all   .3s ease;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+main{
+    
+    
+}
+main p{
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+main h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--red);
+
+
+}
+main article{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 2rem;
+}
+
+.active {
+    color: var(--red);
+}
+
+main article ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+main article ul li{
+flex-basis: 49%;
+list-style: none;
+
+}
+
+main article ul li img{
+    width: 100%;
+    cursor: pointer;
+    transition: transform   .3s ease;
+}
+
+main article ul li img:hover{
+   transform: scale(1.05);
+}
+
+
+.join{
+    text-align: center;
+    background: var(--gray);
+    padding: 2rem 0;
+}
+
+.join h2{
+    padding top: 1.5em;
+    padding bottom: .75rem;
+    font-size: 2rem;
+
+}
+
+.join p{
+    line-height: 1.5rem;
+    padding: 2rem;
+}
+
+
+.join input{
+    border: 0;
+    outline: 0;
+    font-size: 1.5rem;
+    height: 50px;
+    border-radius: 50px;
+    padding: .25rem;
+    
+}
+
+.join input::placeholder{
+    text-align: center;
+}
+
+footer {
+    background-color: var(--red);
+    text-align: center;
+    padding: 2rem;
+}
