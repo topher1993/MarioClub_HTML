@@ -12,7 +12,6 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
 }
 
 header{
@@ -41,17 +40,18 @@ header h1 {
 }
 
 .banner h2{
-    font-size: 5rem;
+    font-size: max(16px ,5vw);
     position: absolute;
     display: inline-block;
     top: 20% ;
     left: 0;
     padding: 2rem 2rem;
     background-color: var(--orange);
+    max-width: fit-content;
 }
 
 .banner span{
-    font-size: 6rem;
+    font-size: max(24px ,6vw);
 }
 
 nav{
@@ -59,6 +59,8 @@ nav{
     padding: 2rem;
     position: sticky;
     top: 107px;
+    z-index: 1;
+    max-width: 100%;
 }
 
 
@@ -70,12 +72,12 @@ nav ul li{
     list-style: none;
 }
 nav ul li a {
-    text-decoration: none;
-    transition: all   .3s ease;
+    text-decoration: 1px underline transparent;
+    transition: text-decoration 300ms ease;
 }
 
 nav ul li a:hover {
-    font-weight: bold;
+    text-decoration: 1px underline var(--red);
     color: var(--orange);
 }
 
@@ -109,11 +111,13 @@ main article ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
 
 }
 
 main article ul li{
-flex-basis: 49%;
+flex-basis: 50%;
 list-style: none;
 
 }
@@ -166,4 +170,30 @@ footer {
     background-color: var(--red);
     text-align: center;
     padding: 2rem;
+}
+
+@media (max-width: 760px){
+    header{
+        position: static
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;  
+        width: auto;     
+    }
+    nav{
+        position: sticky;
+        top: 0;
+    }
+
+    /* .banner h2{
+        font-size: 2rem;
+    }
+    .banner h2 span{
+        font-size: 4rem;
+    } */
+
 }
